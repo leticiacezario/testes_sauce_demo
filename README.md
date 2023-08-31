@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Automação de testes web para o site Sauce Demo utilizando Robot Framework no padrão Page Objects
 
  Requisitos de software:
@@ -32,3 +33,7 @@ Exemplos de execuções do robot a partir da pasta raiz
 # testes_sauce_demo
 Testes automatizados do site Sauce Demo utilizando Robot Framework no padrão Page Objects
 >>>>>>> 9f8b002cf698c2077c3e83ba720106f2d7d20e82
+=======
+# testes_sauce_demo
+Teste automatizados do site Sauce Demo utilizando Robot Framework no padrão Page Objects
+>>>>>>> parent of 9b3a71d (Criação dos testes)
