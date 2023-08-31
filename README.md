@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Automação de testes web para o site Sauce Demo utilizando Robot Framework no padrão Page Objects
 
  Requisitos de software:
@@ -27,3 +28,7 @@ Exemplos de execuções do robot a partir da pasta raiz
 * EX1:  robot -d test/logs/Results .\Saucedemo_testes\              -> Executa todos os testes da pasta Saucedemo_testes e salva o resultado na pasta Results
 * EX2:  robot -d test/logs/Results -i login .\Saucedemo_testes\     -> Executa todos os testes com a tag login e salva o resultado na pasta Results
 * EX3:  robot -d test/logs/Results -d login .\Saucedemo_testes\     -> Executa todos os testes, menos os que possuem a tag login e salva o resultado na pasta Results
+=======
+# testes_sauce_demo
+Testes automatizados do site Sauce Demo utilizando Robot Framework no padrão Page Objects
+>>>>>>> 9f8b002cf698c2077c3e83ba720106f2d7d20e82
