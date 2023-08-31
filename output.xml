@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230831 20:56:36.116" rpa="false" schemaversion="4">
+<suite id="s1" name="Saucedemo testes" source="C:\Users\leeh_\OneDrive\Documentos\GitHub\testes_sauce_demo\Saucedemo_testes">
+<suite id="s1-s1" name="Test" source="C:\Users\leeh_\OneDrive\Documentos\GitHub\testes_sauce_demo\Saucedemo_testes\Test">
+<suite id="s1-s1-s1" name="TestCarrinho" source="C:\Users\leeh_\OneDrive\Documentos\GitHub\testes_sauce_demo\Saucedemo_testes\Test\TestCarrinho.robot">
+<test id="s1-s1-s1-t1" name="Caso de Teste: Adicionar produto no carrinho" line="13">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230831 20:56:36.277" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230831 20:56:36.277" endtime="20230831 20:56:37.581"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:36.277" endtime="20230831 20:56:37.581"/>
+</kw>
+<kw name="Dado que eu acesse o site Sauce Demo" library="Login">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230831 20:56:37.582" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" starttime="20230831 20:56:37.582" endtime="20230831 20:56:38.013"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230831 20:56:38.015" endtime="20230831 20:56:38.034"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:37.582" endtime="20230831 20:56:38.034"/>
+</kw>
+<kw name="E realize o login" library="Login">
+<kw name="Dado que eu acesse o site Sauce Demo" library="Login">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230831 20:56:38.035" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" starttime="20230831 20:56:38.035" endtime="20230831 20:56:38.081"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230831 20:56:38.081" endtime="20230831 20:56:38.097"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:38.035" endtime="20230831 20:56:38.097"/>
+</kw>
+<kw name="Quando inserir usuario e senha validos" library="Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USER_INPUT}</arg>
+<arg>${USER_VALID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:38.097" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20230831 20:56:38.097" endtime="20230831 20:56:38.171"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD_VALID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:38.172" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<status status="PASS" starttime="20230831 20:56:38.171" endtime="20230831 20:56:38.229"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:38.230" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20230831 20:56:38.230" endtime="20230831 20:56:38.283"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:38.097" endtime="20230831 20:56:38.283"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:38.035" endtime="20230831 20:56:38.283"/>
+</kw>
+<kw name="Quando adicionar o produto &quot;Sauce Labs Backpack&quot; no carrinho" library="Vitrine">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TITLE_PRODUCTS}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230831 20:56:38.297" level="INFO">Element '//span[@class='title'][contains(.,'Products')]' is displayed.</msg>
+<status status="PASS" starttime="20230831 20:56:38.283" endtime="20230831 20:56:38.297"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ADD_BACKPACK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:38.298" level="INFO">Clicking element 'add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20230831 20:56:38.298" endtime="20230831 20:56:38.329"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:38.283" endtime="20230831 20:56:38.329"/>
+</kw>
+<kw name="Então o produto &quot;Sauce Labs Backpack&quot; deve ser mostrado no carrinho" library="Carrinho">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CART}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:38.329" level="INFO">Clicking element '//a[contains(@class,'shopping_cart_link')]'.</msg>
+<status status="PASS" starttime="20230831 20:56:38.329" endtime="20230831 20:56:38.362"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${BACKPACK}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230831 20:56:38.378" level="INFO">Element '//div[@class='inventory_item_name'][contains(.,'Sauce Labs Backpack')]' is displayed.</msg>
+<status status="PASS" starttime="20230831 20:56:38.362" endtime="20230831 20:56:38.378"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:38.329" endtime="20230831 20:56:38.379"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230831 20:56:38.379" endtime="20230831 20:56:40.464"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:38.379" endtime="20230831 20:56:40.464"/>
+</kw>
+<doc>Este teste é referente ao login com sucesso</doc>
+<tag>adicionar_produto</tag>
+<tag>carrinho</tag>
+<tag>cenario_positivo</tag>
+<status status="PASS" starttime="20230831 20:56:36.277" endtime="20230831 20:56:40.464"/>
+</test>
+<test id="s1-s1-s1-t2" name="Caso de Teste: Remover produto do carrinho" line="21">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230831 20:56:40.466" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230831 20:56:40.466" endtime="20230831 20:56:41.657"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:40.465" endtime="20230831 20:56:41.657"/>
+</kw>
+<kw name="Dado que eu acesse o site Sauce Demo" library="Login">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230831 20:56:41.659" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" starttime="20230831 20:56:41.659" endtime="20230831 20:56:41.949"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230831 20:56:41.949" endtime="20230831 20:56:41.966"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:41.657" endtime="20230831 20:56:41.966"/>
+</kw>
+<kw name="E realize o login" library="Login">
+<kw name="Dado que eu acesse o site Sauce Demo" library="Login">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230831 20:56:41.967" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" starttime="20230831 20:56:41.967" endtime="20230831 20:56:42.009"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230831 20:56:42.009" endtime="20230831 20:56:42.025"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:41.967" endtime="20230831 20:56:42.025"/>
+</kw>
+<kw name="Quando inserir usuario e senha validos" library="Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USER_INPUT}</arg>
+<arg>${USER_VALID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:42.025" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20230831 20:56:42.025" endtime="20230831 20:56:42.091"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD_VALID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:42.092" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<status status="PASS" starttime="20230831 20:56:42.091" endtime="20230831 20:56:42.142"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:42.142" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20230831 20:56:42.142" endtime="20230831 20:56:42.198"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:42.025" endtime="20230831 20:56:42.198"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:41.966" endtime="20230831 20:56:42.198"/>
+</kw>
+<kw name="E existe o produto &quot;Sauce Labs Backpack&quot; no carrinho" library="Carrinho">
+<kw name="Quando adicionar o produto &quot;Sauce Labs Backpack&quot; no carrinho" library="Vitrine">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TITLE_PRODUCTS}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230831 20:56:42.212" level="INFO">Element '//span[@class='title'][contains(.,'Products')]' is displayed.</msg>
+<status status="PASS" starttime="20230831 20:56:42.199" endtime="20230831 20:56:42.212"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ADD_BACKPACK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:42.213" level="INFO">Clicking element 'add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20230831 20:56:42.212" endtime="20230831 20:56:42.241"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:42.199" endtime="20230831 20:56:42.242"/>
+</kw>
+<kw name="Então o produto &quot;Sauce Labs Backpack&quot; deve ser mostrado no carrinho" library="Carrinho">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CART}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:42.242" level="INFO">Clicking element '//a[contains(@class,'shopping_cart_link')]'.</msg>
+<status status="PASS" starttime="20230831 20:56:42.242" endtime="20230831 20:56:42.273"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${BACKPACK}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230831 20:56:42.286" level="INFO">Element '//div[@class='inventory_item_name'][contains(.,'Sauce Labs Backpack')]' is displayed.</msg>
+<status status="PASS" starttime="20230831 20:56:42.273" endtime="20230831 20:56:42.287"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:42.242" endtime="20230831 20:56:42.287"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:42.198" endtime="20230831 20:56:42.287"/>
+</kw>
+<kw name="Quando remover o produto &quot;Sauce Labs Backpack&quot; do carrinho" library="Carrinho">
+<kw name="Então o produto &quot;Sauce Labs Backpack&quot; deve ser mostrado no carrinho" library="Carrinho">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CART}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:42.287" level="INFO">Clicking element '//a[contains(@class,'shopping_cart_link')]'.</msg>
+<status status="PASS" starttime="20230831 20:56:42.287" endtime="20230831 20:56:42.314"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${BACKPACK}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230831 20:56:42.327" level="INFO">Element '//div[@class='inventory_item_name'][contains(.,'Sauce Labs Backpack')]' is displayed.</msg>
+<status status="PASS" starttime="20230831 20:56:42.314" endtime="20230831 20:56:42.327"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:42.287" endtime="20230831 20:56:42.327"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${REMOVE_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:42.327" level="INFO">Clicking element 'remove-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20230831 20:56:42.327" endtime="20230831 20:56:42.349"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:42.287" endtime="20230831 20:56:42.349"/>
+</kw>
+<kw name="Então o carrinho deve ficar vazio" library="Carrinho">
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>${CART_NUM}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20230831 20:56:42.356" level="INFO">Element '//span[@class='shopping_cart_badge'][contains(.,'1')]' did not exist.</msg>
+<status status="PASS" starttime="20230831 20:56:42.350" endtime="20230831 20:56:42.356"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:42.349" endtime="20230831 20:56:42.356"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230831 20:56:42.357" endtime="20230831 20:56:44.441"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:42.356" endtime="20230831 20:56:44.441"/>
+</kw>
+<doc>Este teste é referente ao login sem sucesso inserindo um usuario inválido</doc>
+<tag>carrinho</tag>
+<tag>cenario_positivo</tag>
+<tag>remover_produto</tag>
+<status status="PASS" starttime="20230831 20:56:40.465" endtime="20230831 20:56:44.441"/>
+</test>
+<test id="s1-s1-s1-t3" name="Caso de Teste: Realizar compra com sucesso" line="31">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230831 20:56:44.441" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230831 20:56:44.441" endtime="20230831 20:56:45.632"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:44.441" endtime="20230831 20:56:45.632"/>
+</kw>
+<kw name="Dado que eu acesse o site Sauce Demo" library="Login">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230831 20:56:45.632" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" starttime="20230831 20:56:45.632" endtime="20230831 20:56:46.012"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230831 20:56:46.012" endtime="20230831 20:56:46.029"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:45.632" endtime="20230831 20:56:46.029"/>
+</kw>
+<kw name="E realize o login" library="Login">
+<kw name="Dado que eu acesse o site Sauce Demo" library="Login">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230831 20:56:46.030" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" starttime="20230831 20:56:46.030" endtime="20230831 20:56:46.085"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230831 20:56:46.085" endtime="20230831 20:56:46.100"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:46.029" endtime="20230831 20:56:46.101"/>
+</kw>
+<kw name="Quando inserir usuario e senha validos" library="Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USER_INPUT}</arg>
+<arg>${USER_VALID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:46.101" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20230831 20:56:46.101" endtime="20230831 20:56:46.168"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD_VALID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:46.168" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<status status="PASS" starttime="20230831 20:56:46.168" endtime="20230831 20:56:46.218"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:46.218" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20230831 20:56:46.218" endtime="20230831 20:56:46.275"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:46.101" endtime="20230831 20:56:46.275"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:46.029" endtime="20230831 20:56:46.275"/>
+</kw>
+<kw name="E existe o produto &quot;Sauce Labs Backpack&quot; no carrinho" library="Carrinho">
+<kw name="Quando adicionar o produto &quot;Sauce Labs Backpack&quot; no carrinho" library="Vitrine">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TITLE_PRODUCTS}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230831 20:56:46.288" level="INFO">Element '//span[@class='title'][contains(.,'Products')]' is displayed.</msg>
+<status status="PASS" starttime="20230831 20:56:46.275" endtime="20230831 20:56:46.288"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ADD_BACKPACK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:46.288" level="INFO">Clicking element 'add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20230831 20:56:46.288" endtime="20230831 20:56:46.323"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:46.275" endtime="20230831 20:56:46.323"/>
+</kw>
+<kw name="Então o produto &quot;Sauce Labs Backpack&quot; deve ser mostrado no carrinho" library="Carrinho">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CART}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:46.323" level="INFO">Clicking element '//a[contains(@class,'shopping_cart_link')]'.</msg>
+<status status="PASS" starttime="20230831 20:56:46.323" endtime="20230831 20:56:46.351"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${BACKPACK}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230831 20:56:46.366" level="INFO">Element '//div[@class='inventory_item_name'][contains(.,'Sauce Labs Backpack')]' is displayed.</msg>
+<status status="PASS" starttime="20230831 20:56:46.351" endtime="20230831 20:56:46.366"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:46.323" endtime="20230831 20:56:46.366"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:46.275" endtime="20230831 20:56:46.366"/>
+</kw>
+<kw name="Quando finalizar a compra" library="Carrinho">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${CHECKOUT_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:46.366" level="INFO">Clicking button 'checkout'.</msg>
+<status status="PASS" starttime="20230831 20:56:46.366" endtime="20230831 20:56:46.408"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_FIRSTNAME}</arg>
+<arg>${FIRST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:46.408" level="INFO">Typing text 'Letícia' into text field 'first-name'.</msg>
+<status status="PASS" starttime="20230831 20:56:46.408" endtime="20230831 20:56:46.465"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_LASTNAME}</arg>
+<arg>${LAST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:46.465" level="INFO">Typing text 'Testes' into text field 'last-name'.</msg>
+<status status="PASS" starttime="20230831 20:56:46.465" endtime="20230831 20:56:46.519"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_POSTALCODE}</arg>
+<arg>${POSTAL_CODE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:46.520" level="INFO">Typing text '00000000' into text field 'postal-code'.</msg>
+<status status="PASS" starttime="20230831 20:56:46.519" endtime="20230831 20:56:46.570"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${CHEKOUT_CONTINUE_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:46.570" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" starttime="20230831 20:56:46.570" endtime="20230831 20:56:46.603"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${OVERVIEW_PRODUCT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230831 20:56:46.613" level="INFO">Element '//div[@class='inventory_item_name'][contains(.,'Sauce Labs Backpack')]' is displayed.</msg>
+<status status="PASS" starttime="20230831 20:56:46.603" endtime="20230831 20:56:46.613"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${FINISH_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:46.614" level="INFO">Clicking button 'finish'.</msg>
+<status status="PASS" starttime="20230831 20:56:46.614" endtime="20230831 20:56:46.648"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:46.366" endtime="20230831 20:56:46.648"/>
+</kw>
+<kw name="Então valido que foi a compra foi finalizada com sucesso" library="Carrinho">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${MESSAGE_COMPLETE}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230831 20:56:46.660" level="INFO">Element '//h2[@class='complete-header'][contains(.,'Thank you for your order!')]' is displayed.</msg>
+<status status="PASS" starttime="20230831 20:56:46.648" endtime="20230831 20:56:46.661"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:46.648" endtime="20230831 20:56:46.661"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230831 20:56:46.661" endtime="20230831 20:56:48.773"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:46.661" endtime="20230831 20:56:48.773"/>
+</kw>
+<doc>Este teste é referente ao login sem sucesso inserindo uma senha inválido</doc>
+<tag>carrinho</tag>
+<tag>cenario_positivo</tag>
+<tag>compra_sucesso</tag>
+<status status="PASS" starttime="20230831 20:56:44.441" endtime="20230831 20:56:48.773"/>
+</test>
+<doc>Nessa suite se encontra todos cenários referente ao carrinho de compras do site Sauce Demo.</doc>
+<status status="PASS" starttime="20230831 20:56:36.132" endtime="20230831 20:56:48.773"/>
+</suite>
+<suite id="s1-s1-s2" name="TestLogin" source="C:\Users\leeh_\OneDrive\Documentos\GitHub\testes_sauce_demo\Saucedemo_testes\Test\TestLogin.robot">
+<test id="s1-s1-s2-t1" name="Caso de Teste: Realizar login com sucesso" line="13">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230831 20:56:48.781" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230831 20:56:48.781" endtime="20230831 20:56:49.959"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:48.781" endtime="20230831 20:56:49.959"/>
+</kw>
+<kw name="Dado que eu acesse o site Sauce Demo" library="Login">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230831 20:56:49.959" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" starttime="20230831 20:56:49.959" endtime="20230831 20:56:50.269"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230831 20:56:50.269" endtime="20230831 20:56:50.287"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:49.959" endtime="20230831 20:56:50.287"/>
+</kw>
+<kw name="Quando inserir usuario e senha validos" library="Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USER_INPUT}</arg>
+<arg>${USER_VALID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:50.288" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20230831 20:56:50.288" endtime="20230831 20:56:50.357"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD_VALID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:50.357" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<status status="PASS" starttime="20230831 20:56:50.357" endtime="20230831 20:56:50.411"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:50.411" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20230831 20:56:50.411" endtime="20230831 20:56:50.469"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:50.287" endtime="20230831 20:56:50.469"/>
+</kw>
+<kw name="Entao valido que login foi realizado com sucesso" library="Vitrine">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${TITLE_PRODUCTS}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230831 20:56:50.477" level="INFO">Element '//span[@class='title'][contains(.,'Products')]' is displayed.</msg>
+<status status="PASS" starttime="20230831 20:56:50.470" endtime="20230831 20:56:50.477"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:50.470" endtime="20230831 20:56:50.477"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230831 20:56:50.477" endtime="20230831 20:56:52.568"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:50.477" endtime="20230831 20:56:52.568"/>
+</kw>
+<doc>Este teste é referente ao login com sucesso</doc>
+<tag>login cenario_positivo</tag>
+<status status="PASS" starttime="20230831 20:56:48.773" endtime="20230831 20:56:52.568"/>
+</test>
+<test id="s1-s1-s2-t2" name="Caso de Teste: Falha ao realizar login com usuario inválido" line="20">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230831 20:56:52.568" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230831 20:56:52.568" endtime="20230831 20:56:53.759"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:52.568" endtime="20230831 20:56:53.759"/>
+</kw>
+<kw name="Dado que eu acesse o site Sauce Demo" library="Login">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230831 20:56:53.761" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" starttime="20230831 20:56:53.761" endtime="20230831 20:56:54.092"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230831 20:56:54.092" endtime="20230831 20:56:54.109"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:53.761" endtime="20230831 20:56:54.109"/>
+</kw>
+<kw name="Quando inserir usuario invalido e senha valida" library="Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USER_INPUT}</arg>
+<arg>${USER_INVALID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:54.110" level="INFO">Typing text 'leticia_teste' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20230831 20:56:54.110" endtime="20230831 20:56:54.176"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD_VALID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:54.177" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<status status="PASS" starttime="20230831 20:56:54.177" endtime="20230831 20:56:54.226"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:54.226" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20230831 20:56:54.226" endtime="20230831 20:56:54.264"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:54.110" endtime="20230831 20:56:54.264"/>
+</kw>
+<kw name="Entao valido retorno da mensagem de erro" library="Login">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${USER_INCORRECT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230831 20:56:54.275" level="INFO">Element '//div[@class='error-message-container error'][contains(.,'Epic sadface: Username and password do not match any user in this service')]' is displayed.</msg>
+<status status="PASS" starttime="20230831 20:56:54.264" endtime="20230831 20:56:54.275"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:54.264" endtime="20230831 20:56:54.275"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230831 20:56:54.275" endtime="20230831 20:56:56.365"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:54.275" endtime="20230831 20:56:56.365"/>
+</kw>
+<doc>Este teste é referente a tentativa de realizar o login inserindo um usuario inválido</doc>
+<tag>cenario_negativo</tag>
+<tag>login</tag>
+<status status="PASS" starttime="20230831 20:56:52.568" endtime="20230831 20:56:56.365"/>
+</test>
+<test id="s1-s1-s2-t3" name="Caso de Teste: Falha ao realizar login com senha inválida" line="27">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230831 20:56:56.365" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230831 20:56:56.365" endtime="20230831 20:56:57.556"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:56.365" endtime="20230831 20:56:57.556"/>
+</kw>
+<kw name="Dado que eu acesse o site Sauce Demo" library="Login">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230831 20:56:57.556" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" starttime="20230831 20:56:57.556" endtime="20230831 20:56:57.856"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230831 20:56:57.856" endtime="20230831 20:56:57.873"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:57.556" endtime="20230831 20:56:57.873"/>
+</kw>
+<kw name="Quando inserir usuario valido e senha invalida" library="Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USER_INPUT}</arg>
+<arg>${USER_VALID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:57.874" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20230831 20:56:57.874" endtime="20230831 20:56:57.942"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD_INVALID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:57.943" level="INFO">Typing text 'teste123' into text field 'password'.</msg>
+<status status="PASS" starttime="20230831 20:56:57.942" endtime="20230831 20:56:57.991"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230831 20:56:57.991" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20230831 20:56:57.991" endtime="20230831 20:56:58.030"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:57.873" endtime="20230831 20:56:58.030"/>
+</kw>
+<kw name="Entao valido retorno da mensagem de erro" library="Login">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${USER_INCORRECT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230831 20:56:58.038" level="INFO">Element '//div[@class='error-message-container error'][contains(.,'Epic sadface: Username and password do not match any user in this service')]' is displayed.</msg>
+<status status="PASS" starttime="20230831 20:56:58.030" endtime="20230831 20:56:58.038"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:58.030" endtime="20230831 20:56:58.038"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230831 20:56:58.038" endtime="20230831 20:57:00.115"/>
+</kw>
+<status status="PASS" starttime="20230831 20:56:58.038" endtime="20230831 20:57:00.115"/>
+</kw>
+<doc>Este teste é referente a tentativa de realizar o login inserindo uma senha inválido</doc>
+<tag>cenario_negativo</tag>
+<tag>login</tag>
+<status status="PASS" starttime="20230831 20:56:56.365" endtime="20230831 20:57:00.115"/>
+</test>
+<test id="s1-s1-s2-t4" name="Caso de Teste: Falha ao realizar login com campo usuario em branco" line="34">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230831 20:57:00.115" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230831 20:57:00.115" endtime="20230831 20:57:01.302"/>
+</kw>
+<status status="PASS" starttime="20230831 20:57:00.115" endtime="20230831 20:57:01.302"/>
+</kw>
+<kw name="Dado que eu acesse o site Sauce Demo" library="Login">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230831 20:57:01.303" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" starttime="20230831 20:57:01.303" endtime="20230831 20:57:01.650"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230831 20:57:01.651" endtime="20230831 20:57:01.674"/>
+</kw>
+<status status="PASS" starttime="20230831 20:57:01.303" endtime="20230831 20:57:01.674"/>
+</kw>
+<kw name="Quando tentar realizar o login sem inserir o usuario" library="Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD_VALID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:57:01.674" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<status status="PASS" starttime="20230831 20:57:01.674" endtime="20230831 20:57:01.755"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230831 20:57:01.756" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20230831 20:57:01.756" endtime="20230831 20:57:01.796"/>
+</kw>
+<status status="PASS" starttime="20230831 20:57:01.674" endtime="20230831 20:57:01.796"/>
+</kw>
+<kw name="Entao valido mensagem de obrigatoriedade do usuario" library="Login">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${MISSING_USER}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230831 20:57:01.812" level="INFO">Element '//h3[@data-test='error'][contains(.,'Epic sadface: Username is required')]' is displayed.</msg>
+<status status="PASS" starttime="20230831 20:57:01.797" endtime="20230831 20:57:01.812"/>
+</kw>
+<status status="PASS" starttime="20230831 20:57:01.797" endtime="20230831 20:57:01.812"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230831 20:57:01.814" endtime="20230831 20:57:03.876"/>
+</kw>
+<status status="PASS" starttime="20230831 20:57:01.812" endtime="20230831 20:57:03.876"/>
+</kw>
+<doc>Este teste é referente a tentativa de realizar o login sem preencher o campo usuario</doc>
+<tag>cenario_negativo</tag>
+<tag>login</tag>
+<status status="PASS" starttime="20230831 20:57:00.115" endtime="20230831 20:57:03.876"/>
+</test>
+<test id="s1-s1-s2-t5" name="Caso de Teste: Falha ao realizar login com campo senha em branco" line="41">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230831 20:57:03.876" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230831 20:57:03.876" endtime="20230831 20:57:05.070"/>
+</kw>
+<status status="PASS" starttime="20230831 20:57:03.876" endtime="20230831 20:57:05.070"/>
+</kw>
+<kw name="Dado que eu acesse o site Sauce Demo" library="Login">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230831 20:57:05.070" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" starttime="20230831 20:57:05.070" endtime="20230831 20:57:05.516"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230831 20:57:05.516" endtime="20230831 20:57:05.535"/>
+</kw>
+<status status="PASS" starttime="20230831 20:57:05.070" endtime="20230831 20:57:05.535"/>
+</kw>
+<kw name="Quando tentar realizar o login sem inserir a senha" library="Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USER_INPUT}</arg>
+<arg>${USER_VALID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:57:05.536" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20230831 20:57:05.535" endtime="20230831 20:57:05.602"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230831 20:57:05.602" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20230831 20:57:05.602" endtime="20230831 20:57:05.641"/>
+</kw>
+<status status="PASS" starttime="20230831 20:57:05.535" endtime="20230831 20:57:05.641"/>
+</kw>
+<kw name="Entao valido mensagem de obrigatoriedade da senha" library="Login">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${MISSING_PASSWORD}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230831 20:57:05.650" level="INFO">Element '//div[@class='error-message-container error'][contains(.,'Epic sadface: Password is required')]' is displayed.</msg>
+<status status="PASS" starttime="20230831 20:57:05.643" endtime="20230831 20:57:05.650"/>
+</kw>
+<status status="PASS" starttime="20230831 20:57:05.641" endtime="20230831 20:57:05.650"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230831 20:57:05.650" endtime="20230831 20:57:07.724"/>
+</kw>
+<status status="PASS" starttime="20230831 20:57:05.650" endtime="20230831 20:57:07.724"/>
+</kw>
+<doc>Este teste é referente a tentativa de realizar o login sem preencher o campo senha</doc>
+<tag>cenario_negativo</tag>
+<tag>login</tag>
+<status status="PASS" starttime="20230831 20:57:03.876" endtime="20230831 20:57:07.724"/>
+</test>
+<test id="s1-s1-s2-t6" name="Caso de Teste: Falha ao realizar login com usuario bloqueado" line="48">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230831 20:57:07.724" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20230831 20:57:07.724" endtime="20230831 20:57:08.986"/>
+</kw>
+<status status="PASS" starttime="20230831 20:57:07.724" endtime="20230831 20:57:08.986"/>
+</kw>
+<kw name="Dado que eu acesse o site Sauce Demo" library="Login">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${LOGIN_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230831 20:57:08.986" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" starttime="20230831 20:57:08.986" endtime="20230831 20:57:09.299"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230831 20:57:09.300" endtime="20230831 20:57:09.317"/>
+</kw>
+<status status="PASS" starttime="20230831 20:57:08.986" endtime="20230831 20:57:09.317"/>
+</kw>
+<kw name="Quando tentar realizar o login usando um usuario bloqueado" library="Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USER_INPUT}</arg>
+<arg>${USER_LOCKED}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:57:09.317" level="INFO">Typing text 'locked_out_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20230831 20:57:09.317" endtime="20230831 20:57:09.389"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD_VALID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230831 20:57:09.389" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<status status="PASS" starttime="20230831 20:57:09.389" endtime="20230831 20:57:09.440"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN_BTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230831 20:57:09.442" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20230831 20:57:09.440" endtime="20230831 20:57:09.479"/>
+</kw>
+<status status="PASS" starttime="20230831 20:57:09.317" endtime="20230831 20:57:09.479"/>
+</kw>
+<kw name="Entao valido retorno da mensagem de erro para usuario bloqueado" library="Login">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${USER_LOCKED_OUT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230831 20:57:09.490" level="INFO">Element '//h3[@data-test='error'][contains(.,'Epic sadface: Sorry, this user has been locked out.')]' is displayed.</msg>
+<status status="PASS" starttime="20230831 20:57:09.479" endtime="20230831 20:57:09.490"/>
+</kw>
+<status status="PASS" starttime="20230831 20:57:09.479" endtime="20230831 20:57:09.490"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230831 20:57:09.490" endtime="20230831 20:57:11.575"/>
+</kw>
+<status status="PASS" starttime="20230831 20:57:09.490" endtime="20230831 20:57:11.575"/>
+</kw>
+<doc>Este teste é referente a tentativa de realizar o login utilizando um usuario bloqueado pelo sistema</doc>
+<tag>cenario_negativo</tag>
+<tag>login</tag>
+<tag>usuario_bloqueado</tag>
+<status status="PASS" starttime="20230831 20:57:07.724" endtime="20230831 20:57:11.575"/>
+</test>
+<doc>Nessa suite se encontra todos os cenário referente ao login do site Sauce Demo.</doc>
+<status status="PASS" starttime="20230831 20:56:48.773" endtime="20230831 20:57:11.575"/>
+</suite>
+<status status="PASS" starttime="20230831 20:56:36.132" endtime="20230831 20:57:11.575"/>
+</suite>
+<status status="PASS" starttime="20230831 20:56:36.116" endtime="20230831 20:57:11.575"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">adicionar_produto</stat>
+<stat pass="3" fail="0" skip="0">carrinho</stat>
+<stat pass="5" fail="0" skip="0">cenario_negativo</stat>
+<stat pass="3" fail="0" skip="0">cenario_positivo</stat>
+<stat pass="1" fail="0" skip="0">compra_sucesso</stat>
+<stat pass="5" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">login cenario_positivo</stat>
+<stat pass="1" fail="0" skip="0">remover_produto</stat>
+<stat pass="1" fail="0" skip="0">usuario_bloqueado</stat>
+</tag>
+<suite>
+<stat pass="9" fail="0" skip="0" id="s1" name="Saucedemo testes">Saucedemo testes</stat>
+<stat pass="9" fail="0" skip="0" id="s1-s1" name="Test">Saucedemo testes.Test</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s1" name="TestCarrinho">Saucedemo testes.Test.TestCarrinho</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1-s2" name="TestLogin">Saucedemo testes.Test.TestLogin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

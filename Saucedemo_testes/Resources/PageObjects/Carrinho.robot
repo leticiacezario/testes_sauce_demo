@@ -1,5 +1,6 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library                SeleniumLibrary
+Documentation          Nesta suite se encontra as keywords referentes a pagina de carrinho
 
 *** Variables ***
 ${CART}                               //a[contains(@class,'shopping_cart_link')]

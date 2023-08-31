@@ -1,5 +1,6 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library                SeleniumLibrary
+Documentation          Nesta suite se encontra as keywords referentes a pagina da vitrine de produtos
 
 
 *** Variables ***

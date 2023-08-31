@@ -1,5 +1,6 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library                SeleniumLibrary
+Documentation          Nesta suite se encontra as keywords basicas para execução dos testes
 
 *** Variables ***
 ${BROWSER}      chrome
