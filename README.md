@@ -25,7 +25,7 @@ Ao rodar o robot pela linha de comando podemos passar alguns argumentos
 
 Exemplos de execuções do robot a partir da pasta raiz
 
-* EX1:  robot -d test/logs/Results .\Saucedemo_testes\              -> Executa todos os testes da pasta Saucedemo_testes e salva o resultado na pasta Results
-* EX2:  robot -d test/logs/Results -i login .\Saucedemo_testes\     -> Executa todos os testes com a tag login e salva o resultado na pasta Results
-* EX3:  robot -d test/logs/Results -d login .\Saucedemo_testes\     -> Executa todos os testes, menos os que possuem a tag login e salva o resultado na pasta Results
+* EX1:  robot -d test/logs/Results \Saucedemo_testes              -> Executa todos os testes da pasta Saucedemo_testes e salva o resultado na pasta Results
+* EX2:  robot -d test/logs/Results -i login \Saucedemo_testes     -> Executa todos os testes com a tag login e salva o resultado na pasta Results
+* EX3:  robot -d test/logs/Results -d login \Saucedemo_testes     -> Executa todos os testes, menos os que possuem a tag login e salva o resultado na pasta Results
 
